@@ -14,7 +14,7 @@ The "game" is a zero-player game, meaning that its evolution is determined by it
 * Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 
 -----
-Big thanks to [link text itself](http://www.quesucede.com/page/show/id/conway-game-of-life-android) for tutorial.
+Big thanks to [quesucede](http://www.quesucede.com/page/show/id/conway-game-of-life-android) for tutorial.
 ------
 Borna Matijanić
 
