@@ -1,13 +1,27 @@
-package ludwig031.com.github.gameoflife;
+package com.quesucede.gameoflife;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends Activity implements OnClickListener {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main);
+
+        View aboutButton = findViewById(R.id.about_button);
+        aboutButton.setOnClickListener(this);
+    }
+
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.about_button:
+                Intent i = new Intent(this, AboutActivity.class);
+                startActivity(i);
+                break;
+        }
     }
 }
