@@ -1,11 +1,10 @@
-package com.quesucede.gameoflife;
+package ludwig031.com.github.gameoflife;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import ludwig031.com.github.gameoflife.R;
 
 public class MainActivity extends Activity implements OnClickListener {
     @Override
@@ -13,6 +12,9 @@ public class MainActivity extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // click-handlers for buttons
+        View newButton = findViewById(R.id.new_button);
+        newButton.setOnClickListener(this);
         View aboutButton = findViewById(R.id.about_button);
         aboutButton.setOnClickListener(this);
     }
@@ -20,7 +22,7 @@ public class MainActivity extends Activity implements OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.about_button:
-                Intent i = new Intent(this, ludwig031.com.github.gameoflife.AboutActivity.AboutActivity.class);
+                Intent i = new Intent(this, AboutActivity.class);
                 startActivity(i);
                 break;
         }
