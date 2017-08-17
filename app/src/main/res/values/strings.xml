@@ -20,4 +20,8 @@
         </ul>
     </string>
     <string name="exit_label">Exit</string>
+    <string name="grid_title">Game of life grid</string>
+    <string name="settings_label">Settings...</string>
+    <string name="settings_title">Game of life settings</string>
+    <string name="settings_shortcut">s</string>S
 </resources>
