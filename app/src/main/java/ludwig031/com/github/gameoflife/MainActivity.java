@@ -21,6 +21,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.new_button:
+                Intent gridIntent = new Intent(this, GridActivity.class);
+                startActivity(gridIntent);
+                break;
             case R.id.about_button:
                 Intent i = new Intent(this, AboutActivity.class);
                 startActivity(i);
