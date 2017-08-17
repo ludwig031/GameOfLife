@@ -1,7 +1,11 @@
 package ludwig031.com.github.gameoflife;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 public class GridActivity extends Activity{
 
@@ -25,7 +29,7 @@ public class GridActivity extends Activity{
         switch (item.getItemId()) {
             case R.id.settings:
                 startActivity(new Intent(this, PreferencesActivity.class));
-                return.true;
+                return true;
         }
         return false;
     }
