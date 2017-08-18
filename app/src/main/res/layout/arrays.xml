@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <resources>
     <string-array name="underpopulation_options">
         <item>Zero live neighbours</item>
-        <item>One live neighbours</item>
+        <item>One live neighbour</item>
         <item>Two live neighbours</item>
-        <item>Thee live neighbours</item>
+        <item>Three live neighbours</item>
         <item>Four live neighbours</item>
+        <item>Five live neighbours</item>
         <item>Six live neighbours</item>
     </string-array>
     <string-array name="underpopulation_values">

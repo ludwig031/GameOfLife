@@ -1,4 +1,4 @@
-package ludwig031.com.github.gameoflife;
+package com.quesucede.gameoflife;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
