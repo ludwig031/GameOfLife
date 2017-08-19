@@ -21,7 +21,13 @@ public class GridActivity extends Activity{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.grid);
+
+        initializeGrid();
+
+        gridView = new GridView(this);
+
+        setContentView(gridView);
+        gridView.requestFocus();
     }
 
     @Override
