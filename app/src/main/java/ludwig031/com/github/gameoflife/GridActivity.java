@@ -9,30 +9,16 @@ import android.view.MenuItem;
 
 public class GridActivity extends Activity{
 
-    private static final int CELL_SIZE = 8;
-    private static final int WIDTH = 320 / CELL_SIZE;
-    private static final int HEIGHT = 480 / CELL_SIZE;
-
-    private static final int[][] gridArray = new int[HEIGHT][WIDTH];
-
-    private GridView gridView;
+    private GridView _gridView;
 
     /** Poziva se kod prvog kreiranja aktivnosti. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.grid);
 
-        initializeGrid();
-
-        gridView = new GridView(this);
-
-        setContentView(gridView);
-        gridView.requestFocus();
-    }
-
-    @Override
-    public void onDestroy() {
-        // stop and remove animation thread
+        _gridView = (GridView)findViewById(R.id.grid_view);
+        _gridView.setMode(GridView.RUNNING);
     }
 
     @Override
@@ -51,5 +37,11 @@ public class GridActivity extends Activity{
                 return true;
         }
         return false;
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        _gridView.setMode(GridView.PAUSE);
     }
 }
