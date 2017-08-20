@@ -1,7 +1,9 @@
 package com.quesucede.gameoflife;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
+import android.preference.PreferenceManager;
 
 public class PreferencesActivity extends PreferenceActivity {
 
