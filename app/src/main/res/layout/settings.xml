@@ -31,7 +31,7 @@
         android:dialogTitle="Animation speed"
         android:defaultValue="3" />
     <CheckBoxPreference android:key="COLOR_CODING"
-        android:title="@string/color_coding_title"
-        android:summary="@string/color_coding_summary"
+        android:title="Color coding?"
+        android:summary="Map the rate of survival"
         android:defaultValue="false" />
 </PreferenceScreen>
