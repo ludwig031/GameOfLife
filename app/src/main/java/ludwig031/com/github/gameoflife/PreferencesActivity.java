@@ -1,9 +1,10 @@
-package com.quesucede.gameoflife;
+package ludwig031.com.github.gameoflife;
 
 import android.content.Context;
-import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
+import android.preference.PreferenceFragment;
+import android.os.Bundle;
 
 public class PreferencesActivity extends PreferenceActivity {
 
@@ -16,10 +17,27 @@ public class PreferencesActivity extends PreferenceActivity {
     private static final String OPTION_ANIMATION_SPEED = "ANIMATION_SPEED_VARIABLE";
     private static final String OPTION_ANIMATION_SPEED_DEFAULT = "3";
 
-    @Override
+    /**@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.settings);
+    }*/
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        getFragmentManager().beginTransaction().replace(android.R.id.content, new MyPreferenceFragment()).commit();
+    }
+
+    public static class MyPreferenceFragment extends PreferenceFragment
+    {
+        @Override
+        public void onCreate(final Bundle savedInstanceState)
+        {
+            super.onCreate(savedInstanceState);
+            addPreferencesFromResource(R.xml.settings);
+        }
     }
 
     public static String getMinimumVariable(Context context) {
