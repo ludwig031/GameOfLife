@@ -31,6 +31,11 @@ public class GridActivity extends Activity{
     }
 
     @Override
+    public void onDestroy() {
+        // stop and remove animation thread
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         MenuInflater inflater = getMenuInflater();
