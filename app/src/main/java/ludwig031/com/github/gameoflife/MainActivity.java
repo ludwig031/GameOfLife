@@ -29,6 +29,9 @@ public class MainActivity extends Activity implements OnClickListener {
                 Intent i = new Intent(this, AboutActivity.class);
                 startActivity(i);
                 break;
+            case R.id.exit_button:
+                android.os.Process.killProcess(android.os.Process.myPid());
+                super.onDestroy();
         }
     }
 }
