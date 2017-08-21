@@ -8,7 +8,7 @@ import android.os.Message;
 import android.util.AttributeSet;
 import android.view.View;
 
-public class GridView {
+public class GridView extends View {
 
     public static final int PAUSE = 0;
     public static final int RUNNING = 1;
@@ -28,7 +28,7 @@ public class GridView {
         }
 
         public void sleep(long delayMillis) {
-            this.removeMessages(0);
+            removeMessages(0);
             sendMessageDelayed(obtainMessage(0), delayMillis);
         }
     };

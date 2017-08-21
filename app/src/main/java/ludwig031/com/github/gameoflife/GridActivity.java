@@ -7,11 +7,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-public class GridActivity extends Activity{
+public class GridActivity extends Activity {
 
     private GridView _gridView;
 
-    /** Poziva se kod prvog kreiranja aktivnosti. */
+    /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
