@@ -12,7 +12,6 @@ public class MainActivity extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // click-handlers for buttons
         View newButton = findViewById(R.id.new_button);
         newButton.setOnClickListener(this);
         View aboutButton = findViewById(R.id.about_button);
