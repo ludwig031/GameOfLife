@@ -17,12 +17,6 @@ public class PreferencesActivity extends PreferenceActivity {
     private static final String OPTION_ANIMATION_SPEED = "ANIMATION_SPEED_VARIABLE";
     private static final String OPTION_ANIMATION_SPEED_DEFAULT = "3";
 
-    /**@Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.settings);
-    }*/
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

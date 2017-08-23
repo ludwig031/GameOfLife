@@ -4,9 +4,9 @@ import android.content.Context;
 
 public class Life {
 
-    public static final int CELL_SIZE = 8;
-    public static final int WIDTH = 320 / CELL_SIZE;
-    public static final int HEIGHT = 480 / CELL_SIZE;
+    public static final int CELL_SIZE = 27;
+    public static final int WIDTH = 1080 / CELL_SIZE;
+    public static final int HEIGHT = 1920 / CELL_SIZE;
 
     private static final int[][] _lifeGrid = new int[HEIGHT][WIDTH];
 
