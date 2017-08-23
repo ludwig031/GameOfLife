@@ -24,13 +24,13 @@ public class Life {
     public void initializeGrid() {
         resetGrid(_lifeGrid);
 
-        _lifeGrid[15][(WIDTH / 2) - 1] = 1;
-        _lifeGrid[15][(WIDTH / 2) + 1] = 1;
-        _lifeGrid[16][(WIDTH / 2) - 1] = 1;
-        _lifeGrid[16][(WIDTH / 2) + 1] = 1;
-        _lifeGrid[17][(WIDTH / 2) - 1] = 1;
-        _lifeGrid[17][(WIDTH / 2)] = 1;
-        _lifeGrid[17][(WIDTH / 2) + 1] = 1;
+        _lifeGrid[25][(WIDTH / 2) - 1] = 1;
+        _lifeGrid[25][(WIDTH / 2) + 1] = 1;
+        _lifeGrid[26][(WIDTH / 2) - 1] = 1;
+        _lifeGrid[26][(WIDTH / 2) + 1] = 1;
+        _lifeGrid[27][(WIDTH / 2) - 1] = 1;
+        _lifeGrid[27][(WIDTH / 2)] = 1;
+        _lifeGrid[27][(WIDTH / 2) + 1] = 1;
     }
 
     public void generateNextGeneration() {

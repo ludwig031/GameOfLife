@@ -15,7 +15,7 @@ public class GridView extends View {
 
     private Life _life;
 
-    private long _moveDelay = 250;
+    private long _moveDelay = 500;
 
     private RefreshHandler _redrawHandler = new RefreshHandler();
 
