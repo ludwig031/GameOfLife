@@ -14,8 +14,6 @@ public class PreferencesActivity extends PreferenceActivity {
     private static final String OPTION_MAXIMUM_DEFAULT = "3";
     private static final String OPTION_SPAWN = "SPAWN_VARIABLE";
     private static final String OPTION_SPAWN_DEFAULT = "3";
-    private static final String OPTION_ANIMATION_SPEED = "ANIMATION_SPEED_VARIABLE";
-    private static final String OPTION_ANIMATION_SPEED_DEFAULT = "3";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -47,10 +45,5 @@ public class PreferencesActivity extends PreferenceActivity {
     public static String getSpawnVariable(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context).
                 getString(OPTION_SPAWN, OPTION_SPAWN_DEFAULT);
-    }
-
-    public static String getAnimationSpeed(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context).
-                getString(OPTION_ANIMATION_SPEED, OPTION_ANIMATION_SPEED_DEFAULT);
     }
 }
