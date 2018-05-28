@@ -18,4 +18,4 @@ Big thanks to [quesucede](http://www.quesucede.com/page/show/id/conway-game-of-l
 ------
 Borna Matijanić
 
-Faculty of Electrical Engineering, Computer Science and Information Technology Osijek
+Faculty of Electrical Engineering, Computer Science and Information Technology Osijek.
