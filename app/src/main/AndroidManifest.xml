@@ -22,5 +22,5 @@
         <activity android:name=".GridActivity" android:label="@string/grid_title" />
         <activity android:name=".PreferencesActivity" android:label="@string/settings_title" />
     </application>
-
 </manifest>
+

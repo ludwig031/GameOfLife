@@ -1,5 +1,5 @@
 package ludwig031.com.github.gameoflife;
-
+ /*import android paketa*/
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

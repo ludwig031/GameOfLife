@@ -19,7 +19,8 @@ public class PreferencesActivity extends PreferenceActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        getFragmentManager().beginTransaction().replace(android.R.id.content, new MyPreferenceFragment()).commit();
+        getFragmentManager().beginTransaction().replace(android.R.id.content,
+                new MyPreferenceFragment()).commit();
     }
 
     public static class MyPreferenceFragment extends PreferenceFragment
@@ -47,3 +48,4 @@ public class PreferencesActivity extends PreferenceActivity {
                 getString(OPTION_SPAWN, OPTION_SPAWN_DEFAULT);
     }
 }
+
