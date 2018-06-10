@@ -4,7 +4,7 @@ android {
     compileSdkVersion 23
 
     defaultConfig {
-        applicationId "org.yccheok.gameoflife"
+        applicationId "com.ludwig031.gameoflife"
         minSdkVersion 23
         targetSdkVersion 23
         versionCode 2
