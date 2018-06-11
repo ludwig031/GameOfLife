@@ -16,9 +16,6 @@ public class SimulationFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // Retain this instance so it isn't destroyed when MainActivity and
-        // MainFragment change configuration.
         setRetainInstance(true);
     }
 
