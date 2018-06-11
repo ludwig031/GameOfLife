@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -13,9 +12,6 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Toast;
 
-/**
- * A placeholder fragment containing a simple view.
- */
 public class MainActivityFragment extends Fragment implements CellsListener {
 
     public MainActivityFragment() {
@@ -27,13 +23,10 @@ public class MainActivityFragment extends Fragment implements CellsListener {
 
         final FragmentManager fm = getFragmentManager();
 
-        // Check to see if we have retained the worker fragment.
         simulationFragment = (SimulationFragment)fm.findFragmentByTag(SIMULATION_FRAGMENT);
 
-        // If not retained (or first time running), we need to create it.
         if (simulationFragment == null) {
             simulationFragment = SimulationFragment.newInstance();
-            // Tell it who it is working with.
             simulationFragment.setTargetFragment(this, 0);
             fm.beginTransaction().add(simulationFragment, SIMULATION_FRAGMENT).commitAllowingStateLoss();
             simulationFragment.random();
@@ -79,6 +72,18 @@ public class MainActivityFragment extends Fragment implements CellsListener {
                 } else {
                     startButton.setText("Stop");
                     simulationFragment.start();
+                }
+            }
+        });
+
+        final Button stepButton = (Button) view.findViewById(R.id.step_button);
+        stepButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (simulationFragment.isStart()) {
+                    Toast.makeText(MainActivityFragment.this.getContext(), "Press stop first", Toast.LENGTH_SHORT).show();
+                } else {
+                    simulationFragment.step();
                 }
             }
         });

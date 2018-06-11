@@ -5,9 +5,6 @@ import android.support.v4.app.Fragment;
 
 import java.util.Random;
 
-/**
- * Created by yccheok on 11/10/2015.
- */
 public class SimulationFragment extends Fragment {
     public static SimulationFragment newInstance() {
         return new SimulationFragment();
@@ -40,7 +37,7 @@ public class SimulationFragment extends Fragment {
                     }
 
                     try {
-                        Thread.sleep(1500);
+                        Thread.sleep(500);
                     } catch (InterruptedException exp) {
                         break;
                     }
@@ -50,6 +47,15 @@ public class SimulationFragment extends Fragment {
 
         thread.start();
         this.thread = thread;
+    }
+
+    public void step() {
+        cells = engine.nextGen(cells);
+
+        Fragment fragment = SimulationFragment.this.getTargetFragment();
+        if (fragment instanceof CellsListener) {
+            ((CellsListener)fragment).update(cells);
+        }
     }
 
     public void stop() {
@@ -89,7 +95,7 @@ public class SimulationFragment extends Fragment {
         Random r = new Random();
 
         cells = new Cells(20, 20);
-        for (int i = 0; i < 60; i++) {
+        for (int i = 0; i < 150; i++) {
             int row = r.nextInt(20 - 0) + 0;
             int col = r.nextInt(20 - 0) + 0;
             cells.getCell(row, col).setAlive(true);

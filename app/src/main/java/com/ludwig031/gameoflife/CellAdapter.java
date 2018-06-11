@@ -32,9 +32,9 @@ public class CellAdapter extends ArrayAdapter<Cell> {
         Cell cell = cells.get(position);
 
         if (cell.isAlive()) {
-            textView.setBackgroundColor(Color.BLACK);
+            textView.setBackgroundColor(0xFF1FDEF1);
         } else {
-            textView.setBackgroundColor(Color.WHITE);
+            textView.setBackgroundColor(0xFF424242);
         }
 
         return textView;
