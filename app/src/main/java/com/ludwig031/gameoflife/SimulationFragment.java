@@ -93,8 +93,8 @@ public class SimulationFragment extends Fragment {
 
         cells = new Cells(20, 20);
         for (int i = 0; i < 150; i++) {
-            int row = r.nextInt(20 - 0) + 0;
-            int col = r.nextInt(20 - 0) + 0;
+            int row = r.nextInt(20);
+            int col = r.nextInt(20);
             cells.getCell(row, col).setAlive(true);
         }
         Fragment fragment = SimulationFragment.this.getTargetFragment();
