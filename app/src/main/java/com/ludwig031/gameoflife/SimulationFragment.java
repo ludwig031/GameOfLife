@@ -74,7 +74,6 @@ public class SimulationFragment extends Fragment {
 
     @Override
     public void onPause() {
-        // Will be triggered during rotation, home button and back button pressed.
         super.onDestroy();
         stop();
     }
