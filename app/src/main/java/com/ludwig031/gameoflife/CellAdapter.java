@@ -13,7 +13,7 @@ public class CellAdapter extends ArrayAdapter<Cell> {
     private Context mContext;
     private List<Cell> cells;
 
-    public CellAdapter(Context c, List<Cell> cells) {
+    private CellAdapter(Context c, List<Cell> cells) {
         super(c, R.layout.cell, cells);
         mContext = c;
         this.cells = cells;
