@@ -72,18 +72,13 @@ public class BasicEngine implements Engine {
                 if (alive) {
                     if (aliveNeighbourSize < 2) {
                         shouldAlive = false;
-                    } else if (aliveNeighbourSize == 2 || aliveNeighbourSize == 3) {
-                        shouldAlive = true;
                     } else {
-                        shouldAlive = false;
+                        shouldAlive = (aliveNeighbourSize == 2 || aliveNeighbourSize == 3);
                     }
                 } else {
-                    if (aliveNeighbourSize == 3) {
-                        shouldAlive = true;
-                    } else {
-                        shouldAlive = false;
-                    }
+                    shouldAlive = aliveNeighbourSize == 3;
                 }
+
                 result.getCell(r, c).setAlive(shouldAlive);
             }
         }
