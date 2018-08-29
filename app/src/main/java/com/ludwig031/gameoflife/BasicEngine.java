@@ -18,54 +18,44 @@ public class BasicEngine implements Engine {
 
                 int _c = c - 1;
                 _c = _c >= 0 ? _c : col - 1;
-                if (cells.getCell(_r, _c).isAlive()) {
-                    aliveNeighbourSize++;
-                }
+                aliveNeighbourSize += Incrementer(cells, _r, _c);
 
                 _c = c;
-                if (cells.getCell(_r, _c).isAlive()) {
-                    aliveNeighbourSize++;
-                }
+                aliveNeighbourSize += Incrementer(cells, _r, _c);
 
                 _c = c + 1;
                 _c = _c < col ? _c : 0;
-                if (cells.getCell(_r, _c).isAlive()) {
-                    aliveNeighbourSize++;
-                }
+                aliveNeighbourSize += Incrementer(cells, _r, _c);
+
 
                 _r = r;
 
                 _c = c - 1;
                 _c = _c >= 0 ? _c : col - 1;
-                if (cells.getCell(_r, _c).isAlive()) {
-                    aliveNeighbourSize++;
-                }
+                aliveNeighbourSize += Incrementer(cells, _r, _c);
+
 
                 _c = c + 1;
                 _c = _c < col ? _c : 0;
-                if (cells.getCell(_r, _c).isAlive()) {
-                    aliveNeighbourSize++;
-                }
+                aliveNeighbourSize += Incrementer(cells, _r, _c);
+
 
                 _r = r + 1;
                 _r = _r < row ? _r : 0;
 
                 _c = c - 1;
                 _c = _c >= 0 ? _c : col - 1;
-                if (cells.getCell(_r, _c).isAlive()) {
-                    aliveNeighbourSize++;
-                }
+                aliveNeighbourSize += Incrementer(cells, _r, _c);
+
 
                 _c = c;
-                if (cells.getCell(_r, _c).isAlive()) {
-                    aliveNeighbourSize++;
-                }
+                aliveNeighbourSize += Incrementer(cells, _r, _c);
+
 
                 _c = c + 1;
                 _c = _c < col ? _c : 0;
-                if (cells.getCell(_r, _c).isAlive()) {
-                    aliveNeighbourSize++;
-                }
+                aliveNeighbourSize += Incrementer(cells, _r, _c);
+
 
                 cell.setAliveNeighbourSize(aliveNeighbourSize);
             }
@@ -99,5 +89,13 @@ public class BasicEngine implements Engine {
         }
 
         return result;
+    }
+
+    private static int Incrementer(Cells cells,int _r,int _c) {
+        if (cells.getCell(_r, _c).isAlive()) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 }
