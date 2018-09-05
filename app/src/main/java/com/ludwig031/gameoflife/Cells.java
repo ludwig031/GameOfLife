@@ -13,6 +13,14 @@ public class Cells {
         }
     }
 
+    int Incrementer(int _r, int _c) {
+        if (getCell(_r, _c).isAlive()) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
     public Cell getCell(int row, int col) {
         int index = (row * this.col) + col;
         return cells.get(index);

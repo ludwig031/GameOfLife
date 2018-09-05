@@ -18,26 +18,26 @@ public class BaseEngine implements Engine {
 
                 int _c = c - 1;
                 _c = _c >= 0 ? _c : col - 1;
-                aliveNeighbourSize += Incrementer(cells, _r, _c);
+                aliveNeighbourSize += cells.Incrementer(_r, _c);
 
                 _c = c;
-                aliveNeighbourSize += Incrementer(cells, _r, _c);
+                aliveNeighbourSize += cells.Incrementer(_r, _c);
 
                 _c = c + 1;
                 _c = _c < col ? _c : 0;
-                aliveNeighbourSize += Incrementer(cells, _r, _c);
+                aliveNeighbourSize += cells.Incrementer(_r, _c);
 
 
                 _r = r;
 
                 _c = c - 1;
                 _c = _c >= 0 ? _c : col - 1;
-                aliveNeighbourSize += Incrementer(cells, _r, _c);
+                aliveNeighbourSize += cells.Incrementer(_r, _c);
 
 
                 _c = c + 1;
                 _c = _c < col ? _c : 0;
-                aliveNeighbourSize += Incrementer(cells, _r, _c);
+                aliveNeighbourSize += cells.Incrementer(_r, _c);
 
 
                 _r = r + 1;
@@ -45,16 +45,16 @@ public class BaseEngine implements Engine {
 
                 _c = c - 1;
                 _c = _c >= 0 ? _c : col - 1;
-                aliveNeighbourSize += Incrementer(cells, _r, _c);
+                aliveNeighbourSize += cells.Incrementer(_r, _c);
 
 
                 _c = c;
-                aliveNeighbourSize += Incrementer(cells, _r, _c);
+                aliveNeighbourSize += cells.Incrementer(_r, _c);
 
 
                 _c = c + 1;
                 _c = _c < col ? _c : 0;
-                aliveNeighbourSize += Incrementer(cells, _r, _c);
+                aliveNeighbourSize += cells.Incrementer(_r, _c);
 
 
                 cell.setAliveNeighbourSize(aliveNeighbourSize);
@@ -86,11 +86,4 @@ public class BaseEngine implements Engine {
         return result;
     }
 
-    private static int Incrementer(Cells cells,int _r,int _c) {
-        if (cells.getCell(_r, _c).isAlive()) {
-            return 1;
-        } else {
-            return 0;
-        }
-    }
 }
