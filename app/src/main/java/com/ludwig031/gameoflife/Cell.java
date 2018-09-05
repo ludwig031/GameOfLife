@@ -9,14 +9,14 @@ public class Cell {
         this.alive = alive;
     }
 
-    public int getAliveNeighbourSize() {
-        return aliveNeighbourSize;
+    public int getAliveNeighbourCount() {
+        return aliveNeighbourCount;
     }
 
-    public void setAliveNeighbourSize(int aliveNeighbourSize) {
-        this.aliveNeighbourSize = aliveNeighbourSize;
+    public void setAliveNeighbourCount(int aliveNeighbourCount) {
+        this.aliveNeighbourCount = aliveNeighbourCount;
     }
 
     private boolean alive = false;
-    private int aliveNeighbourSize = 0;
+    private int aliveNeighbourCount = 0;
 }

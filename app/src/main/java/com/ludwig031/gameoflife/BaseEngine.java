@@ -57,7 +57,7 @@ public class BaseEngine implements Engine {
                 aliveNeighbourSize += cells.Incrementer(_r, _c);
 
 
-                cell.setAliveNeighbourSize(aliveNeighbourSize);
+                cell.setAliveNeighbourCount(aliveNeighbourSize);
             }
         }
 
@@ -65,7 +65,7 @@ public class BaseEngine implements Engine {
         for (int r = 0; r < row; r++) {
             for (int c = 0; c < col; c++) {
                 final Cell cell = cells.getCell(r, c);
-                final int aliveNeighbourSize = cell.getAliveNeighbourSize();
+                final int aliveNeighbourSize = cell.getAliveNeighbourCount();
                 final boolean alive = cell.isAlive();
 
                 final boolean shouldAlive;
