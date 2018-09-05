@@ -1,6 +1,6 @@
 package com.ludwig031.gameoflife;
 
-public class BasicEngine implements Engine {
+public class BaseEngine implements Engine {
 
     @Override
     public Cells nextGen(Cells cells) {

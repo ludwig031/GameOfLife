@@ -104,6 +104,6 @@ public class SimulationFragment extends Fragment {
 
     private volatile boolean flag = false;
     private Thread thread = null;
-    private Engine engine = new BasicEngine();
+    private Engine engine = new BaseEngine();
     private Cells cells = new Cells(20, 20);
 }
