@@ -1,18 +1,3 @@
 <resources>
     <string name="app_name">Igra života</string>
-    <string name="main_title">Igra života</string>
-    <string name="new_game_label">Nova igra</string>
-    <string name="about_label">O igri</string>
-    <string name="about_text">
-        Aplikacija "Igra života" praktični je dio moga završnog rada kao studenta informatike na
-        Fakultetu elektrotehnike, računarstva i informacijskih tehnologija Osijek.
-        Igra života, također poznata kao jednostavno Život, automatizacija je ćelija razvijena od
-        strane britanskog matematičara Johna Hortona Conwaya 1970. godine.
-        "Igra" je napravljena za 0 igrača, što znači da njezin razvoj ovisi o početnom stanju,
-        bez potrebe za daljnim ulaznim parametrima.
-    </string>
-    <string name="grid_title">Mreža igre života</string>
-    <string name="settings_label">Postavke…</string>
-    <string name="settings_title">Postavke igre života</string>
-    <string name="settings_shortcut">s</string>
 </resources>
