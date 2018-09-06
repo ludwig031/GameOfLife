@@ -51,7 +51,7 @@ public class MainActivityFragment extends Fragment implements CellsListener {
             public void onItemClick(AdapterView<?> arg0, View arg1, int position,
                                     long arg3) {
                 if (simulationFragment.isStart()) {
-                    Toast.makeText(MainActivityFragment.this.getContext(), "Press stop first", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivityFragment.this.getContext(), "Prvo zaustavi proces", Toast.LENGTH_SHORT).show();
                 } else {
                     final CellAdapter cellAdapter = (CellAdapter) gridView.getAdapter();
                     Cell cell = cellAdapter.getItem(position);
@@ -81,7 +81,7 @@ public class MainActivityFragment extends Fragment implements CellsListener {
             @Override
             public void onClick(View view) {
                 if (simulationFragment.isStart()) {
-                    Toast.makeText(MainActivityFragment.this.getContext(), "Press stop first", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivityFragment.this.getContext(), "Prvo zaustavi proces", Toast.LENGTH_SHORT).show();
                 } else {
                     simulationFragment.step();
                 }
@@ -93,7 +93,7 @@ public class MainActivityFragment extends Fragment implements CellsListener {
             @Override
             public void onClick(View view) {
                 if (simulationFragment.isStart()) {
-                    Toast.makeText(MainActivityFragment.this.getContext(), "Press stop first", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivityFragment.this.getContext(), "Prvo zaustavi proces", Toast.LENGTH_SHORT).show();
                 } else {
                     simulationFragment.random();
                 }
@@ -105,7 +105,7 @@ public class MainActivityFragment extends Fragment implements CellsListener {
             @Override
             public void onClick(View view) {
                 if (simulationFragment.isStart()) {
-                    Toast.makeText(MainActivityFragment.this.getContext(), "Press stop first", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivityFragment.this.getContext(), "Prvo zaustavi proces", Toast.LENGTH_SHORT).show();
                 } else {
                     simulationFragment.clear();
                 }
