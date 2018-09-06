@@ -2,12 +2,13 @@ package com.ludwig031.gameoflife;
 
 import java.util.List;
 
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
+import android.support.annotation.NonNull;
 import android.widget.TextView;
+import android.widget.ArrayAdapter;
+import android.view.ViewGroup;
+import android.view.View;
+import android.view.LayoutInflater;
+import android.content.Context;
 
 public class CellAdapter extends ArrayAdapter<Cell> {
     private Context mContext;
@@ -15,11 +16,11 @@ public class CellAdapter extends ArrayAdapter<Cell> {
 
     public CellAdapter(Context c, List<Cell> cells) {
         super(c, R.layout.cell, cells);
-        mContext = c;
         this.cells = cells;
+        mContext = c;
     }
 
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
         TextView textView;
         if (convertView == null) {
             LayoutInflater inflater = LayoutInflater.from(mContext);
