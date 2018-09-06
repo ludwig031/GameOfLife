@@ -78,7 +78,6 @@ public class SimulationFragment extends Fragment {
         stop();
     }
 
-
     public void clear() {
         cells = new Cells(20, 20);
         Fragment fragment = SimulationFragment.this.getTargetFragment();
@@ -88,12 +87,12 @@ public class SimulationFragment extends Fragment {
     }
 
     public void random() {
-        Random r = new Random();
+        Random rnd = new Random();
 
         cells = new Cells(20, 20);
         for (int i = 0; i < 150; i++) {
-            int row = r.nextInt(20);
-            int col = r.nextInt(20);
+            int row = rnd.nextInt(20);
+            int col = rnd.nextInt(20);
             cells.getCell(row, col).setAlive(true);
         }
         Fragment fragment = SimulationFragment.this.getTargetFragment();
