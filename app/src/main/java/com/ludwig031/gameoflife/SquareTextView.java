@@ -2,9 +2,9 @@ package com.ludwig031.gameoflife;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.TextView;
+import android.support.v7.widget.AppCompatTextView;
 
-public class SquareTextView extends TextView {
+public class SquareTextView extends AppCompatTextView {
 
     public SquareTextView(Context context) {
         super(context);
