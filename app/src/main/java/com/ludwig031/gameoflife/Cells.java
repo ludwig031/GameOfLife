@@ -13,7 +13,7 @@ public class Cells {
         }
     }
 
-    int Incrementer(int _r, int _c) {
+    public int Incrementer(int _r, int _c) {
         if (getCell(_r, _c).isAlive()) {
             return 1;
         } else {
