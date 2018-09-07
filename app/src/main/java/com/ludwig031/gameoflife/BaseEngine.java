@@ -1,7 +1,6 @@
 package com.ludwig031.gameoflife;
 
 public class BaseEngine implements Engine {
-
     @Override
     public Cells nextGen(Cells cells) {
         final int row = cells.getRow();
@@ -82,8 +81,6 @@ public class BaseEngine implements Engine {
                 result.getCell(r, c).setAlive(shouldAlive);
             }
         }
-
         return result;
     }
-
 }
